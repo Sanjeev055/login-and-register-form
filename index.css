@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+
+section
+{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+section::before
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000,rgb(242, 0, 255),#000);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(100%);
+	}
+}
+
+section span
+{
+	position: relative;
+	display: block;
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+	background: #181818;
+	z-index: 2;
+	transition: 1.5s;
+}
+
+section span:hover
+{
+	background: rgb(255, 0, 102);
+	transition: 0s;
+}
+
+section .signin
+{
+	position: absolute;
+	width: 400px;
+  background: #222;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  text-align: center;
+  padding: 60px 32px;
+  width: 370px;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+.content header{
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.field{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+}
+
+.field span{
+  color: #ff0000;
+  width: 40px;
+  line-height: 45px;
+}
+
+.field input{
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+}
+.space{
+  margin-top: 16px;
+}
+
+.show{
+  position: absolute;
+  right: 13px;
+  bottom: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #B80F0A;
+  display: none;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.pass-key:valid ~ .show{
+  display: block;
+}
+
+.pass{
+  text-align: left;
+  margin: 10px 0;
+}
+
+.pass a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+
+.pass:hover a{
+  text-decoration: underline;
+}
+
+.field input[type="submit"]{
+  background: #3498db;
+  border: 1px solid #2691d9;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.field input[type="submit"]:hover{
+  background: #2691d9;
+}
+
+.login{
+  color: white;
+  margin: 20px 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+.links{
+  display: flex;
+  cursor: pointer;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.facebook,.instagram{
+  display:inline-block;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.facebook{
+  background: #4267B2;
+  border: 1px solid #3e61a8;
+}
+
+.instagram{
+  background: #E1306C;
+  border: 1px solid #df2060;
+}
+
+.facebook:hover{
+  background: #3e61a8;
+}
+
+.instagram:hover{
+  background: #e50000;
+}
+
+.links i{
+  font-size: 20px;
+}
+
+i span{
+  margin-left: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: 'Poppins',sans-serif;
+}
+
+.signup{
+  font-size: 15px;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+}
+
+.signup a{
+  color: #3498db;
+  text-decoration: none;
+}
+
+.signup a:hover{
+  text-decoration: underline;
+}
+
+.fa{
+	color: #2691d9;
+	background-color: aliceblue;
+	height: 100%;
+}
+
+.fab{
+	position: relative;
+	margin-right: 10px;
+	float: left;
+	left: 18px;
+	bottom: -12px;
+	font-size: 700px;
+}
+
+/* Default styles for larger screens */
+.content {
+  width: 370px;
+  padding: 60px 32px;
+  /* your existing styles */
+}
+
+.field {
+  height: 45px;
+}
+
+.field input {
+  font-size: 16px;
+}
+
+.show {
+  font-size: 13px;
+  right: 13px;
+  bottom: 15px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    width: 320px;
+    padding: 40px 20px;
+  }
+
+  .field {
+    height: 40px;
+  }
+
+  .field input {
+    font-size: 14px;
+  }
+
+  .show {
+    font-size: 12px;
+  }
+}
+
+/* Additional media queries for other screen sizes if needed */
+@media (max-width: 480px) {
+  .content {
+    width: 280px;
+    padding: 30px 15px;
+  }
+
+  .field {
+    height: 35px;
+  }
+
+  .field input {
+    font-size: 12px;
+  }
+
+  .show {
+    font-size: 11px;
+  }
+}
